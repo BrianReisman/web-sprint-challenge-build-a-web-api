@@ -46,6 +46,15 @@ router.put("/:id", middleware.validateId, async (req, res, next) => {
   }
 });
 
+router.delete('/:id', middleware.validateId, async (req,res,next)=> {
+  try{
+    await Actions.remove(req.id)
+    res.status(204).send()
+  } catch(err){
+    console.log('error')
+  }
+})
+
 //error
 function errorHandler(error, req, res, next) {
   console.log(error);

@@ -11,7 +11,7 @@ async function validateId(req, res, next) {
         req.data = data;
         next();
       } else {
-        res.status(400).json([]);
+        res.status(400).json(`${req.params.id} is not a valid ID. A valid ID is required`); //![]
       }
     } catch (err) {
       next(err);
