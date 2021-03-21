@@ -1,4 +1,4 @@
-# Sprint Challenge Instructions
+<!-- # Sprint Challenge Instructions
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
@@ -28,24 +28,24 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 - [ ] Follow [instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374) to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>` branch.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [ ] Check to see that Codegrade has accepted your git submission. -->
 
-### Task 3: Project Requirements (MVP)
+<!-- ### Task 3: Project Requirements (MVP) -->
 
-Your finished project must include all of the following requirements:
+<!-- Your finished project must include all of the following requirements: -->
 
-#### NPM Scripts
+<!-- #### NPM Scripts -->
 
-A _"test"_ script already exists you can use to run tests against your code.
+<!-- A _"test"_ script already exists you can use to run tests against your code. -->
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Install _nodemon_ as a development dependency only that would not be used in production.
+<!-- - [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server. -->
+<!-- - [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server. -->
+<!-- - [ ] Install _nodemon_ as a development dependency only that would not be used in production. -->
 
 #### Build an API
 
 - [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
-  - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_.
+  <!-- - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_. -->
   - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_.
   - `[POST] /api/actions` returns the newly created action as the body of the _response_.
   - `[PUT] /api/actions/:id` returns the updated action as the body of the _response_.
@@ -116,6 +116,14 @@ We have provided test data for all the resources.
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 - Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 - It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+
+
+
+
+
+
+
+
 
 ### Task 4: Stretch Goals
 
