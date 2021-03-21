@@ -26,7 +26,7 @@ router.post("/", middleware.validateActionBody, async (req, res, next) => {
   try {
     const data = await Actions.insert(req.body);
     if (data) {
-      res.status(200).json(req.body);
+      res.status(200).json(data);
     } else {
       res.status(400).json({
         message: `Unable to create action.`,
@@ -37,10 +37,10 @@ router.post("/", middleware.validateActionBody, async (req, res, next) => {
   }
 });
 
-router.put("/:id", middleware.validateId, async (req, res, next) => {
+router.put("/:id", middleware.validateId, middleware.validateActionBody, async (req, res, next) => {
   try{
     const updatedAction = await Actions.update(req.id, req.body)
-    res.status(200).json(updatedAction)
+    res.status(200).json(req.body)
   } catch (err){
     next(err)
   }
@@ -51,7 +51,7 @@ router.delete('/:id', middleware.validateId, async (req,res,next)=> {
     await Actions.remove(req.id)
     res.status(204).send()
   } catch(err){
-    console.log('error')
+    next(err)
   }
 })
 

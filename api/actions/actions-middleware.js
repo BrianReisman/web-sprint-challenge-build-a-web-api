@@ -11,7 +11,7 @@ async function validateId(req, res, next) {
         req.data = data;
         next();
       } else {
-        res.status(400).json(`${req.params.id} is not a valid ID. A valid ID is required`); //![]
+        res.status(404).json(`${req.params.id} is not a valid ID. A valid ID is required`); //![]
       }
     } catch (err) {
       next(err);
@@ -31,7 +31,8 @@ function validateActionBody(req, res, next) {
         "project_id, description, are notes are required and description must be under 128 characters in length",
     });
   } else {
-    req.body = { ...req.body, completed: false };
+    // req.body = { ...req.body, completed: false };
+    // req.body = { ...req.body};
     next();
   }
 }
