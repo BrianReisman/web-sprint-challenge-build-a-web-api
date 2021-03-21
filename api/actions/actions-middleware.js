@@ -2,7 +2,7 @@ const Actions = require("./actions-model");
 
 async function validateId(req, res, next) {
   if (!req.params.id) {
-    res.status(400).json({ message: "an ID is required" });
+    res.status(404).json({ message: "an ID is required" });
   } else {
     try {
       const data = await Actions.get(req.params.id);

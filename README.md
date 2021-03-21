@@ -54,17 +54,17 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 - [ ] Inside `api/projects/projects-router.js` build endpoints for performing CRUD operations on _projects_:
   <!-- - `[GET] /api/projects` returns an array of projects (or an empty array) as the body of the response. -->
   <!-- - `[GET] /api/projects/:id` returns a project with the given `id` as the body of the _response_. -->
-  - `[POST] /api/projects` returns the newly created project as the body of the _response_.
-  - `[PUT] /api/projects/:id` returns the updated project as the body of the _response_.
-  - `[DELETE] /api/projects/:id` returns no _response_ body.
+  <!-- - `[POST] /api/projects` returns the newly created project as the body of the _response_. -->
+  <!-- - `[PUT] /api/projects/:id` returns the updated project as the body of the _response_. -->
+  <!-- - `[DELETE] /api/projects/:id` returns no _response_ body. -->
 
 - [ ] Inside `api/projects/projects-router.js` add an endpoint for retrieving the list of actions for a project:
   - `[GET] /api/projects/:id/actions` sends an array of actions (or an empty array) as the body of the response.
 
-- Both Projects and Actions have an optional `completed` property (see Database Schemas below). In both cases it's a boolean stored in the database as a 1 or a 0. Make sure to transform the raw `completed` values obtained from the db to `true` or `false`, before sending them back to the client.
+<!-- - Both Projects and Actions have an optional `completed` property (see Database Schemas below). In both cases it's a boolean stored in the database as a 1 or a 0. Make sure to transform the raw `completed` values obtained from the db to `true` or `false`, before sending them back to the client.
 - When adding an action, make sure the `project_id` provided belongs to an existing `project`.
 - If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- Use an HTTP client like `HTTPie`, `Postman` or `Insomnia` to test the API's endpoints.
+- Use an HTTP client like `HTTPie`, `Postman` or `Insomnia` to test the API's endpoints. -->
 <!-- - Use Express Routers to organize your endpoints. -->
 <!-- - The use of middlewares to avoid repetitive code is highly recommended. -->
 <!-- - Your `server.js` file lives inside the `api` folder. -->
