@@ -1,4 +1,4 @@
-# Sprint Challenge Instructions
+<!-- # Sprint Challenge Instructions
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
@@ -28,47 +28,47 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 - [ ] Follow [instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374) to set up Codegrade's Webhook and Deploy Key, making sure your deployment is set to your `<firstName-lastName>` branch.
 - [ ] Push your first commit: `git commit --allow-empty -m "first commit" && git push`.
-- [ ] Check to see that Codegrade has accepted your git submission.
+- [ ] Check to see that Codegrade has accepted your git submission. -->
 
-### Task 3: Project Requirements (MVP)
+<!-- ### Task 3: Project Requirements (MVP) -->
 
-Your finished project must include all of the following requirements:
+<!-- Your finished project must include all of the following requirements: -->
 
-#### NPM Scripts
+<!-- #### NPM Scripts -->
 
-A _"test"_ script already exists you can use to run tests against your code.
+<!-- A _"test"_ script already exists you can use to run tests against your code. -->
 
-- [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server.
-- [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server.
-- [ ] Install _nodemon_ as a development dependency only that would not be used in production.
+<!-- - [ ] Write an _npm script_ named _"start"_ that uses `node` to run the API server. -->
+<!-- - [ ] Write an _npm script_ named _"server"_ that uses `nodemon`to run the API server. -->
+<!-- - [ ] Install _nodemon_ as a development dependency only that would not be used in production. -->
 
 #### Build an API
 
-- [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
-  - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_.
-  - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_.
-  - `[POST] /api/actions` returns the newly created action as the body of the _response_.
-  - `[PUT] /api/actions/:id` returns the updated action as the body of the _response_.
-  - `[DELETE] /api/actions/:id` returns no _response_ body.
+<!-- - [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_: -->
+  <!-- - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_. -->
+  <!-- - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_. -->
+  <!-- - `[POST] /api/actions` returns the newly created action as the body of the _response_. -->
+  <!-- - `[PUT] /api/actions/:id` returns the updated action as the body of the _response_. -->
+  <!-- - `[DELETE] /api/actions/:id` returns no _response_ body. -->
 
 - [ ] Inside `api/projects/projects-router.js` build endpoints for performing CRUD operations on _projects_:
-  - `[GET] /api/projects` returns an array of projects (or an empty array) as the body of the response.
-  - `[GET] /api/projects/:id` returns a project with the given `id` as the body of the _response_.
-  - `[POST] /api/projects` returns the newly created project as the body of the _response_.
-  - `[PUT] /api/projects/:id` returns the updated project as the body of the _response_.
-  - `[DELETE] /api/projects/:id` returns no _response_ body.
+  <!-- - `[GET] /api/projects` returns an array of projects (or an empty array) as the body of the response. -->
+  <!-- - `[GET] /api/projects/:id` returns a project with the given `id` as the body of the _response_. -->
+  <!-- - `[POST] /api/projects` returns the newly created project as the body of the _response_. -->
+  <!-- - `[PUT] /api/projects/:id` returns the updated project as the body of the _response_. -->
+  <!-- - `[DELETE] /api/projects/:id` returns no _response_ body. -->
 
 - [ ] Inside `api/projects/projects-router.js` add an endpoint for retrieving the list of actions for a project:
   - `[GET] /api/projects/:id/actions` sends an array of actions (or an empty array) as the body of the response.
 
-- Both Projects and Actions have an optional `completed` property (see Database Schemas below). In both cases it's a boolean stored in the database as a 1 or a 0. Make sure to transform the raw `completed` values obtained from the db to `true` or `false`, before sending them back to the client.
+<!-- - Both Projects and Actions have an optional `completed` property (see Database Schemas below). In both cases it's a boolean stored in the database as a 1 or a 0. Make sure to transform the raw `completed` values obtained from the db to `true` or `false`, before sending them back to the client.
 - When adding an action, make sure the `project_id` provided belongs to an existing `project`.
 - If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- Use an HTTP client like `HTTPie`, `Postman` or `Insomnia` to test the API's endpoints.
-- Use Express Routers to organize your endpoints.
-- The use of middlewares to avoid repetitive code is highly recommended.
-- Your `server.js` file lives inside the `api` folder.
-- Your `index.js` file lives at the root of the project.
+- Use an HTTP client like `HTTPie`, `Postman` or `Insomnia` to test the API's endpoints. -->
+<!-- - Use Express Routers to organize your endpoints. -->
+<!-- - The use of middlewares to avoid repetitive code is highly recommended. -->
+<!-- - Your `server.js` file lives inside the `api` folder. -->
+<!-- - Your `index.js` file lives at the root of the project. -->
 
 ### Database Schemas
 
@@ -78,12 +78,12 @@ The description of the structure and extra information about each _resource_ sto
 
 | Field       | Data Type | Metadata                                                                    |
 | ----------- | --------- | --------------------------------------------------------------------------- |
-| id          | number    | no need to provide it when creating projects, the database will generate it |
+<!-- | id          | number    | no need to provide it when creating projects, the database will generate it | -->
 | name        | string    | required                                                                    |
 | description | string    | required                                                                    |
 | completed   | boolean   | used to indicate if the project has been completed, not required            |
 
-#### Actions
+<!-- #### Actions
 
 | Field       | Data Type | Metadata                                                                                         |
 | ----------- | --------- | ------------------------------------------------------------------------------------------------ |
@@ -91,11 +91,11 @@ The description of the structure and extra information about each _resource_ sto
 | project_id  | number    | required, must be the id of an existing project                                                  |
 | description | string    | up to 128 characters long, required                                                              |
 | notes       | string    | no size limit, required. Used to record additional notes or requirements to complete the action  |
-| completed   | boolean   | used to indicate if the action has been completed, not required                                  |
+| completed   | boolean   | used to indicate if the action has been completed, not required                                  | -->
 
-### Database Persistence Helpers
+<!-- ### Database Persistence Helpers -->
 
-The project includes models you can use to manage the persistence of _project_ and _action_ data. These files are `api/projects/projects-model.js` and `api/actions/actions-model.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource:
+<!-- The project includes models you can use to manage the persistence of _project_ and _action_ data. These files are `api/projects/projects-model.js` and `api/actions/actions-model.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource: -->
 
 **All these helper methods return a promise. Remember to use .then().catch() or async/await.**
 
@@ -111,11 +111,19 @@ We have provided test data for all the resources.
 **Notes:**
 
 - Run tests locally executing `npm test`.
-- You are welcome to create additional files for middlewares, but **do not move or rename existing files** or folders.
-- Do not make changes to your `package.json` except to add additional dependencies and scripts.
-- In your solution, it is essential that you follow best practices and produce clean and professional results.
-- Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
-- It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+<!-- - You are welcome to create additional files for middlewares, but **do not move or rename existing files** or folders. -->
+<!-- - Do not make changes to your `package.json` except to add additional dependencies and scripts. -->
+<!-- - In your solution, it is essential that you follow best practices and produce clean and professional results. -->
+<!-- - Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. -->
+<!-- - It is better to submit a challenge that meets MVP than one that attempts too much and does not. -->
+
+
+
+
+
+
+
+
 
 ### Task 4: Stretch Goals
 
