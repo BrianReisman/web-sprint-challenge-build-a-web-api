@@ -1,10 +1,23 @@
-// function validateId(req,res,next){
-//   if(req.params.id){
-//     next()
-//   } else {
-//     res.status(400).json({message: "an ID is required"})
-//   }
-// })
+const Actions = require("./actions-model");
+
+async function validateId(req, res, next) {
+  if (!req.params.id) {
+    res.status(400).json({ message: "an ID is required" });
+  } else {
+    try {
+      const data = await Actions.get(req.params.id);
+      if (data) {
+        req.id = req.params.id;
+        req.data = data;
+        next();
+      } else {
+        res.status(400).json([]);
+      }
+    } catch (err) {
+      next(err);
+    }
+  }
+}
 
 function validateActionBody(req, res, next) {
   if (
@@ -13,18 +26,17 @@ function validateActionBody(req, res, next) {
     req.body.description.length > 128 ||
     !req.body.notes
   ) {
-    res
-      .status(400)
-      .json({
-        message:
-          "project_id, description, are notes are required and description must be under 128 characters in length",
-      });
+    res.status(400).json({
+      message:
+        "project_id, description, are notes are required and description must be under 128 characters in length",
+    });
   } else {
-    req.body = {...req.body, completed: false}
+    req.body = { ...req.body, completed: false };
     next();
   }
 }
 
 module.exports = {
   validateActionBody,
+  validateId,
 };

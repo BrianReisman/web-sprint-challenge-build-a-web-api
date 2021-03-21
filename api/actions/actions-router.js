@@ -18,20 +18,8 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:id", async (req, res, next) => {
-  const { id } = req.params;
-  try {
-    const data = await Actions.get(id);
-    if (data) {
-      res.status(200).json(data);
-    } else {
-      res.status(404).json({
-        message: `No action with an ID of ${id} exists.`,
-      });
-    }
-  } catch (err) {
-    next(err);
-  }
+router.get("/:id", middleware.validateId, async (req, res, next) => {
+  res.status(200).json(req.data);
 });
 
 router.post("/", middleware.validateActionBody, async (req, res, next) => {
@@ -49,8 +37,18 @@ router.post("/", middleware.validateActionBody, async (req, res, next) => {
   }
 });
 
+router.put("/:id", middleware.validateId, async (req, res, next) => {
+  try{
+    const updatedAction = await Actions.update(req.id, req.body)
+    res.status(200).json(updatedAction)
+  } catch (err){
+    next(err)
+  }
+});
+
 //error
 function errorHandler(error, req, res, next) {
+  console.log(error);
   res.status(500).json(error.mesage);
 }
 
