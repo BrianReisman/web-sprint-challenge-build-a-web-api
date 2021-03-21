@@ -5,6 +5,7 @@ const middleware = require("./actions-middleware");
 
 //configure
 const router = express.Router();
+
 router.get("/", async (req, res, next) => {
   try {
     const data = await Actions.get();

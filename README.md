@@ -44,7 +44,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 #### Build an API
 
-- [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
+<!-- - [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_: -->
   <!-- - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_. -->
   <!-- - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_. -->
   <!-- - `[POST] /api/actions` returns the newly created action as the body of the _response_. -->
@@ -52,8 +52,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
   <!-- - `[DELETE] /api/actions/:id` returns no _response_ body. -->
 
 - [ ] Inside `api/projects/projects-router.js` build endpoints for performing CRUD operations on _projects_:
-  - `[GET] /api/projects` returns an array of projects (or an empty array) as the body of the response.
-  - `[GET] /api/projects/:id` returns a project with the given `id` as the body of the _response_.
+  <!-- - `[GET] /api/projects` returns an array of projects (or an empty array) as the body of the response. -->
+  <!-- - `[GET] /api/projects/:id` returns a project with the given `id` as the body of the _response_. -->
   - `[POST] /api/projects` returns the newly created project as the body of the _response_.
   - `[PUT] /api/projects/:id` returns the updated project as the body of the _response_.
   - `[DELETE] /api/projects/:id` returns no _response_ body.
@@ -65,10 +65,10 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 - When adding an action, make sure the `project_id` provided belongs to an existing `project`.
 - If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
 - Use an HTTP client like `HTTPie`, `Postman` or `Insomnia` to test the API's endpoints.
-- Use Express Routers to organize your endpoints.
-- The use of middlewares to avoid repetitive code is highly recommended.
-- Your `server.js` file lives inside the `api` folder.
-- Your `index.js` file lives at the root of the project.
+<!-- - Use Express Routers to organize your endpoints. -->
+<!-- - The use of middlewares to avoid repetitive code is highly recommended. -->
+<!-- - Your `server.js` file lives inside the `api` folder. -->
+<!-- - Your `index.js` file lives at the root of the project. -->
 
 ### Database Schemas
 
@@ -78,12 +78,12 @@ The description of the structure and extra information about each _resource_ sto
 
 | Field       | Data Type | Metadata                                                                    |
 | ----------- | --------- | --------------------------------------------------------------------------- |
-| id          | number    | no need to provide it when creating projects, the database will generate it |
+<!-- | id          | number    | no need to provide it when creating projects, the database will generate it | -->
 | name        | string    | required                                                                    |
 | description | string    | required                                                                    |
 | completed   | boolean   | used to indicate if the project has been completed, not required            |
 
-#### Actions
+<!-- #### Actions
 
 | Field       | Data Type | Metadata                                                                                         |
 | ----------- | --------- | ------------------------------------------------------------------------------------------------ |
@@ -91,11 +91,11 @@ The description of the structure and extra information about each _resource_ sto
 | project_id  | number    | required, must be the id of an existing project                                                  |
 | description | string    | up to 128 characters long, required                                                              |
 | notes       | string    | no size limit, required. Used to record additional notes or requirements to complete the action  |
-| completed   | boolean   | used to indicate if the action has been completed, not required                                  |
+| completed   | boolean   | used to indicate if the action has been completed, not required                                  | -->
 
-### Database Persistence Helpers
+<!-- ### Database Persistence Helpers -->
 
-The project includes models you can use to manage the persistence of _project_ and _action_ data. These files are `api/projects/projects-model.js` and `api/actions/actions-model.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource:
+<!-- The project includes models you can use to manage the persistence of _project_ and _action_ data. These files are `api/projects/projects-model.js` and `api/actions/actions-model.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource: -->
 
 **All these helper methods return a promise. Remember to use .then().catch() or async/await.**
 
