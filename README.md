@@ -46,8 +46,8 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 
 - [ ] Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
   <!-- - `[GET] /api/actions` returns an array of actions (or an empty array) as the body of the _response_. -->
-  - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_.
-  - `[POST] /api/actions` returns the newly created action as the body of the _response_.
+  <!-- - `[GET] /api/actions/:id` returns an action with the given `id` as the body of the _response_. -->
+  <!-- - `[POST] /api/actions` returns the newly created action as the body of the _response_. -->
   - `[PUT] /api/actions/:id` returns the updated action as the body of the _response_.
   - `[DELETE] /api/actions/:id` returns no _response_ body.
 
@@ -111,11 +111,11 @@ We have provided test data for all the resources.
 **Notes:**
 
 - Run tests locally executing `npm test`.
-- You are welcome to create additional files for middlewares, but **do not move or rename existing files** or folders.
-- Do not make changes to your `package.json` except to add additional dependencies and scripts.
-- In your solution, it is essential that you follow best practices and produce clean and professional results.
-- Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
-- It is better to submit a challenge that meets MVP than one that attempts too much and does not.
+<!-- - You are welcome to create additional files for middlewares, but **do not move or rename existing files** or folders. -->
+<!-- - Do not make changes to your `package.json` except to add additional dependencies and scripts. -->
+<!-- - In your solution, it is essential that you follow best practices and produce clean and professional results. -->
+<!-- - Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. -->
+<!-- - It is better to submit a challenge that meets MVP than one that attempts too much and does not. -->
 
 
 
